@@ -24,27 +24,59 @@
 {"headline":"Explore","url":"http://localhost:4000/explore.html","@type":"WebPage","description":"A Test-Bed for Visually Grounded Compositional Generalization with Real Images","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="#157878" name="theme-color">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
-  <link rel="stylesheet" href="/assets/css/style.css?v=213a115749af3a4c18876b3203685d53f66b3c13">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v=83d6e2a692ef02d30f5e27975c36108c976fb7cd">
 
+
+  <!-- CSS only -->
 </head>
 
 <body>
-  <div class="navbar">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+  <script>
+    lightbox.option({
+      'disableScrolling': true,
+      'wrapAround': true,
+      // 'imageFadeDuration': 300,
+      // 'fadeDuration': 300,
+      // 'resizeDuration': 400
+      'positionFromTop': 100
+    })
+  </script>
+
+
+  <!-- <div class="navbar">
     <a class="active" href="/index.html">COVR</a>
     <a href="https://arxiv.org/">Paper</a>
     <a href="/explore.html">Explore</a>
-  </div>
+  </div> -->
+  <nav class="navbar navbar-custom fixed-top navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand active" href="/index.html">COVR</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="https://arxiv.org/">Paper</a>
+          <a class="nav-item nav-link" href="/explore.html">Explore</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
   <div class="main">
     <header class="page-header" role="banner">
       <h1 class="project-name">COVR</h1>
       <h2 class="project-tagline">A Test-Bed for Visually Grounded Compositional Generalization with Real Images</h2>
       <a class="btn" href="https://arxiv.org/">Paper</a>
-      <!-- <a class="btn" href="https://github.com/Shivanshu-Gupta/COVR">GitHub</a> -->
+      <!-- <a class="btn" href="https://github.com/covr-dataset/covr-dataset.github.io">GitHub</a> -->
       <a class="btn" href="https://github.com/benbogin/covr-dataset">GitHub</a>
       <a class="btn" href="/index.html#download">Download</a>
       <a class="btn" href="/explore.html">Explore</a>
@@ -53,15 +85,6 @@
 
 
     <main class="main-content" id="content" role="main">
-      <!-- https://github.com/pages/Shivanshu-Gupta/COVR
-      <br>
-      /pages/Shivanshu-Gupta/COVR
-      <br>
-      http://localhost:4000
-      <br>
-      
-      <br> -->
-
       <h1 id="explore">Explore</h1>
 
 <p>Below you will find a representative set of examples from <strong>COVR</strong> each consisting of a question, a set of context images and answer. For more details on the generation process and the different types of questions please refer to <a href="https://arxiv.org/">our paper</a>.</p>
@@ -70,288 +93,572 @@
   
     
     <hr />
-    <p class="question"><strong>Question:</strong> Is the man wearing the wetsuit crouched?</p>
-    <br />
-    
-    
+    <div class="container">
+      <p class="question"><strong>Question:</strong> Is the man wearing the wetsuit crouched?</p>
       
-      <img class="modal-img hover-shadow" src="assets/images/examples/2399053.jpg" onclick="openModal(this)" alt="2399053.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2371945.jpg" onclick="openModal(this)" alt="2371945.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2362991.jpg" onclick="openModal(this)" alt="2362991.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2400554.jpg" onclick="openModal(this)" alt="2400554.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2399681.jpg" onclick="openModal(this)" alt="2399681.jpg" />
-    
-    <br />
-    <p class="answer"><strong>Answer:</strong> false</p>
+      <!-- <div class="photo-gallery"> -->
+        <div class="row photos align-items-center">
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2399053.jpg" data-lightbox="photos1" data-title="Is the man wearing the wetsuit crouched?">
+                <img src="assets/images/examples/2399053.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2371945.jpg" data-lightbox="photos1" data-title="Is the man wearing the wetsuit crouched?">
+                <img src="assets/images/examples/2371945.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2362991.jpg" data-lightbox="photos1" data-title="Is the man wearing the wetsuit crouched?">
+                <img src="assets/images/examples/2362991.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2400554.jpg" data-lightbox="photos1" data-title="Is the man wearing the wetsuit crouched?">
+                <img src="assets/images/examples/2400554.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2399681.jpg" data-lightbox="photos1" data-title="Is the man wearing the wetsuit crouched?">
+                <img src="assets/images/examples/2399681.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+        </div>
+      <!-- </div> -->
+      <p class="answer"><strong>Answer:</strong> false</p>
+    </div>
   
     
     <hr />
-    <p class="question"><strong>Question:</strong> Are there the same number of images that have a cake on a white plate as there are images that have a lemon on a white plate?</p>
-    <br />
-    
-    
+    <div class="container">
+      <p class="question"><strong>Question:</strong> Are there the same number of images that have a cake on a white plate as there are images that have a lemon on a white plate?</p>
       
-      <img class="modal-img hover-shadow" src="assets/images/examples/2372362.jpg" onclick="openModal(this)" alt="2372362.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2339554.jpg" onclick="openModal(this)" alt="2339554.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2396664.jpg" onclick="openModal(this)" alt="2396664.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2394733.jpg" onclick="openModal(this)" alt="2394733.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2388666.jpg" onclick="openModal(this)" alt="2388666.jpg" />
-    
-    <br />
-    <p class="answer"><strong>Answer:</strong> true</p>
+      <!-- <div class="photo-gallery"> -->
+        <div class="row photos align-items-center">
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2372362.jpg" data-lightbox="photos2" data-title="Are there the same number of images that have a cake on a white plate as there are images that have a lemon on a white plate?">
+                <img src="assets/images/examples/2372362.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2339554.jpg" data-lightbox="photos2" data-title="Are there the same number of images that have a cake on a white plate as there are images that have a lemon on a white plate?">
+                <img src="assets/images/examples/2339554.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2396664.jpg" data-lightbox="photos2" data-title="Are there the same number of images that have a cake on a white plate as there are images that have a lemon on a white plate?">
+                <img src="assets/images/examples/2396664.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2394733.jpg" data-lightbox="photos2" data-title="Are there the same number of images that have a cake on a white plate as there are images that have a lemon on a white plate?">
+                <img src="assets/images/examples/2394733.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2388666.jpg" data-lightbox="photos2" data-title="Are there the same number of images that have a cake on a white plate as there are images that have a lemon on a white plate?">
+                <img src="assets/images/examples/2388666.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+        </div>
+      <!-- </div> -->
+      <p class="answer"><strong>Answer:</strong> true</p>
+    </div>
   
     
     <hr />
-    <p class="question"><strong>Question:</strong> In how many of the images can you see exactly two green cones?</p>
-    <br />
-    
-    
+    <div class="container">
+      <p class="question"><strong>Question:</strong> In how many of the images can you see exactly two green cones?</p>
       
-      <img class="modal-img hover-shadow" src="assets/images/examples/2404190.jpg" onclick="openModal(this)" alt="2404190.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2370737.jpg" onclick="openModal(this)" alt="2370737.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2387283.jpg" onclick="openModal(this)" alt="2387283.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2389826.jpg" onclick="openModal(this)" alt="2389826.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2361887.jpg" onclick="openModal(this)" alt="2361887.jpg" />
-    
-    <br />
-    <p class="answer"><strong>Answer:</strong> 2</p>
+      <!-- <div class="photo-gallery"> -->
+        <div class="row photos align-items-center">
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2404190.jpg" data-lightbox="photos3" data-title="In how many of the images can you see exactly two green cones?">
+                <img src="assets/images/examples/2404190.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2370737.jpg" data-lightbox="photos3" data-title="In how many of the images can you see exactly two green cones?">
+                <img src="assets/images/examples/2370737.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2387283.jpg" data-lightbox="photos3" data-title="In how many of the images can you see exactly two green cones?">
+                <img src="assets/images/examples/2387283.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2389826.jpg" data-lightbox="photos3" data-title="In how many of the images can you see exactly two green cones?">
+                <img src="assets/images/examples/2389826.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2361887.jpg" data-lightbox="photos3" data-title="In how many of the images can you see exactly two green cones?">
+                <img src="assets/images/examples/2361887.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+        </div>
+      <!-- </div> -->
+      <p class="answer"><strong>Answer:</strong> 2</p>
+    </div>
   
     
     <hr />
-    <p class="question"><strong>Question:</strong> At least one image depicts a girl hitting a ball while wearing gloves.</p>
-    <br />
-    
-    
+    <div class="container">
+      <p class="question"><strong>Question:</strong> At least one image depicts a girl hitting a ball while wearing gloves.</p>
       
-      <img class="modal-img hover-shadow" src="assets/images/examples/2412358.jpg" onclick="openModal(this)" alt="2412358.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2319126.jpg" onclick="openModal(this)" alt="2319126.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2379960.jpg" onclick="openModal(this)" alt="2379960.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2401191.jpg" onclick="openModal(this)" alt="2401191.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2386899.jpg" onclick="openModal(this)" alt="2386899.jpg" />
-    
-    <br />
-    <p class="answer"><strong>Answer:</strong> false</p>
+      <!-- <div class="photo-gallery"> -->
+        <div class="row photos align-items-center">
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2412358.jpg" data-lightbox="photos4" data-title="At least one image depicts a girl hitting a ball while wearing gloves.">
+                <img src="assets/images/examples/2412358.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2319126.jpg" data-lightbox="photos4" data-title="At least one image depicts a girl hitting a ball while wearing gloves.">
+                <img src="assets/images/examples/2319126.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2379960.jpg" data-lightbox="photos4" data-title="At least one image depicts a girl hitting a ball while wearing gloves.">
+                <img src="assets/images/examples/2379960.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2401191.jpg" data-lightbox="photos4" data-title="At least one image depicts a girl hitting a ball while wearing gloves.">
+                <img src="assets/images/examples/2401191.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2386899.jpg" data-lightbox="photos4" data-title="At least one image depicts a girl hitting a ball while wearing gloves.">
+                <img src="assets/images/examples/2386899.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+        </div>
+      <!-- </div> -->
+      <p class="answer"><strong>Answer:</strong> false</p>
+    </div>
   
     
     <hr />
-    <p class="question"><strong>Question:</strong> There are precisely two men wearing white shorts in how many images?</p>
-    <br />
-    
-    
+    <div class="container">
+      <p class="question"><strong>Question:</strong> There are precisely two men wearing white shorts in how many images?</p>
       
-      <img class="modal-img hover-shadow" src="assets/images/examples/2362087.jpg" onclick="openModal(this)" alt="2362087.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2408365.jpg" onclick="openModal(this)" alt="2408365.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2389091.jpg" onclick="openModal(this)" alt="2389091.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2371987.jpg" onclick="openModal(this)" alt="2371987.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2371012.jpg" onclick="openModal(this)" alt="2371012.jpg" />
-    
-    <br />
-    <p class="answer"><strong>Answer:</strong> 1</p>
+      <!-- <div class="photo-gallery"> -->
+        <div class="row photos align-items-center">
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2362087.jpg" data-lightbox="photos5" data-title="There are precisely two men wearing white shorts in how many images?">
+                <img src="assets/images/examples/2362087.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2408365.jpg" data-lightbox="photos5" data-title="There are precisely two men wearing white shorts in how many images?">
+                <img src="assets/images/examples/2408365.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2389091.jpg" data-lightbox="photos5" data-title="There are precisely two men wearing white shorts in how many images?">
+                <img src="assets/images/examples/2389091.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2371987.jpg" data-lightbox="photos5" data-title="There are precisely two men wearing white shorts in how many images?">
+                <img src="assets/images/examples/2371987.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2371012.jpg" data-lightbox="photos5" data-title="There are precisely two men wearing white shorts in how many images?">
+                <img src="assets/images/examples/2371012.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+        </div>
+      <!-- </div> -->
+      <p class="answer"><strong>Answer:</strong> 1</p>
+    </div>
   
     
     <hr />
-    <p class="question"><strong>Question:</strong> Is the plate on a brown table the same color as the plate that is on a black table?</p>
-    <br />
-    
-    
+    <div class="container">
+      <p class="question"><strong>Question:</strong> Is the plate on a brown table the same color as the plate that is on a black table?</p>
       
-      <img class="modal-img hover-shadow" src="assets/images/examples/2391219.jpg" onclick="openModal(this)" alt="2391219.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2387048.jpg" onclick="openModal(this)" alt="2387048.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2389735.jpg" onclick="openModal(this)" alt="2389735.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2346114.jpg" onclick="openModal(this)" alt="2346114.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2378140.jpg" onclick="openModal(this)" alt="2378140.jpg" />
-    
-    <br />
-    <p class="answer"><strong>Answer:</strong> true</p>
+      <!-- <div class="photo-gallery"> -->
+        <div class="row photos align-items-center">
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2391219.jpg" data-lightbox="photos6" data-title="Is the plate on a brown table the same color as the plate that is on a black table?">
+                <img src="assets/images/examples/2391219.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2387048.jpg" data-lightbox="photos6" data-title="Is the plate on a brown table the same color as the plate that is on a black table?">
+                <img src="assets/images/examples/2387048.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2389735.jpg" data-lightbox="photos6" data-title="Is the plate on a brown table the same color as the plate that is on a black table?">
+                <img src="assets/images/examples/2389735.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2346114.jpg" data-lightbox="photos6" data-title="Is the plate on a brown table the same color as the plate that is on a black table?">
+                <img src="assets/images/examples/2346114.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2378140.jpg" data-lightbox="photos6" data-title="Is the plate on a brown table the same color as the plate that is on a black table?">
+                <img src="assets/images/examples/2378140.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+        </div>
+      <!-- </div> -->
+      <p class="answer"><strong>Answer:</strong> true</p>
+    </div>
   
     
     <hr />
-    <p class="question"><strong>Question:</strong> There are fewer plates on the table than there are on the wall.</p>
-    <br />
-    
-    
+    <div class="container">
+      <p class="question"><strong>Question:</strong> There are fewer plates on the table than there are on the wall.</p>
       
-      <img class="modal-img hover-shadow" src="assets/images/examples/2356515.jpg" onclick="openModal(this)" alt="2356515.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2320242.jpg" onclick="openModal(this)" alt="2320242.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2321317.jpg" onclick="openModal(this)" alt="2321317.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2389735.jpg" onclick="openModal(this)" alt="2389735.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/1593260.jpg" onclick="openModal(this)" alt="1593260.jpg" />
-    
-    <br />
-    <p class="answer"><strong>Answer:</strong> true</p>
+      <!-- <div class="photo-gallery"> -->
+        <div class="row photos align-items-center">
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2356515.jpg" data-lightbox="photos7" data-title="There are fewer plates on the table than there are on the wall.">
+                <img src="assets/images/examples/2356515.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2320242.jpg" data-lightbox="photos7" data-title="There are fewer plates on the table than there are on the wall.">
+                <img src="assets/images/examples/2320242.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2321317.jpg" data-lightbox="photos7" data-title="There are fewer plates on the table than there are on the wall.">
+                <img src="assets/images/examples/2321317.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2389735.jpg" data-lightbox="photos7" data-title="There are fewer plates on the table than there are on the wall.">
+                <img src="assets/images/examples/2389735.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/1593260.jpg" data-lightbox="photos7" data-title="There are fewer plates on the table than there are on the wall.">
+                <img src="assets/images/examples/1593260.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+        </div>
+      <!-- </div> -->
+      <p class="answer"><strong>Answer:</strong> true</p>
+    </div>
   
     
     <hr />
-    <p class="question"><strong>Question:</strong> There is at least 1 image with exactly 2 dark bottles on a counter.</p>
-    <br />
-    
-    
+    <div class="container">
+      <p class="question"><strong>Question:</strong> There is at least 1 image with exactly 2 dark bottles on a counter.</p>
       
-      <img class="modal-img hover-shadow" src="assets/images/examples/2373966.jpg" onclick="openModal(this)" alt="2373966.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/713086.jpg" onclick="openModal(this)" alt="713086.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2363794.jpg" onclick="openModal(this)" alt="2363794.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2365382.jpg" onclick="openModal(this)" alt="2365382.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2162.jpg" onclick="openModal(this)" alt="2162.jpg" />
-    
-    <br />
-    <p class="answer"><strong>Answer:</strong> true</p>
+      <!-- <div class="photo-gallery"> -->
+        <div class="row photos align-items-center">
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2373966.jpg" data-lightbox="photos8" data-title="There is at least 1 image with exactly 2 dark bottles on a counter.">
+                <img src="assets/images/examples/2373966.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/713086.jpg" data-lightbox="photos8" data-title="There is at least 1 image with exactly 2 dark bottles on a counter.">
+                <img src="assets/images/examples/713086.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2363794.jpg" data-lightbox="photos8" data-title="There is at least 1 image with exactly 2 dark bottles on a counter.">
+                <img src="assets/images/examples/2363794.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2365382.jpg" data-lightbox="photos8" data-title="There is at least 1 image with exactly 2 dark bottles on a counter.">
+                <img src="assets/images/examples/2365382.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2162.jpg" data-lightbox="photos8" data-title="There is at least 1 image with exactly 2 dark bottles on a counter.">
+                <img src="assets/images/examples/2162.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+        </div>
+      <!-- </div> -->
+      <p class="answer"><strong>Answer:</strong> true</p>
+    </div>
   
     
     <hr />
-    <p class="question"><strong>Question:</strong> Are there 2 boys wearing a hat?</p>
-    <br />
-    
-    
+    <div class="container">
+      <p class="question"><strong>Question:</strong> Are there 2 boys wearing a hat?</p>
       
-      <img class="modal-img hover-shadow" src="assets/images/examples/2396174.jpg" onclick="openModal(this)" alt="2396174.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2319339.jpg" onclick="openModal(this)" alt="2319339.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2393352.jpg" onclick="openModal(this)" alt="2393352.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2331321.jpg" onclick="openModal(this)" alt="2331321.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2395746.jpg" onclick="openModal(this)" alt="2395746.jpg" />
-    
-    <br />
-    <p class="answer"><strong>Answer:</strong> false</p>
+      <!-- <div class="photo-gallery"> -->
+        <div class="row photos align-items-center">
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2396174.jpg" data-lightbox="photos9" data-title="Are there 2 boys wearing a hat?">
+                <img src="assets/images/examples/2396174.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2319339.jpg" data-lightbox="photos9" data-title="Are there 2 boys wearing a hat?">
+                <img src="assets/images/examples/2319339.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2393352.jpg" data-lightbox="photos9" data-title="Are there 2 boys wearing a hat?">
+                <img src="assets/images/examples/2393352.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2331321.jpg" data-lightbox="photos9" data-title="Are there 2 boys wearing a hat?">
+                <img src="assets/images/examples/2331321.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2395746.jpg" data-lightbox="photos9" data-title="Are there 2 boys wearing a hat?">
+                <img src="assets/images/examples/2395746.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+        </div>
+      <!-- </div> -->
+      <p class="answer"><strong>Answer:</strong> false</p>
+    </div>
   
     
     <hr />
-    <p class="question"><strong>Question:</strong> What is being held by the man in the jacket?</p>
-    <br />
-    
-    
+    <div class="container">
+      <p class="question"><strong>Question:</strong> What is being held by the man in the jacket?</p>
       
-      <img class="modal-img hover-shadow" src="assets/images/examples/2362155.jpg" onclick="openModal(this)" alt="2362155.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2320242.jpg" onclick="openModal(this)" alt="2320242.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2322606.jpg" onclick="openModal(this)" alt="2322606.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2368037.jpg" onclick="openModal(this)" alt="2368037.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2317105.jpg" onclick="openModal(this)" alt="2317105.jpg" />
-    
-    <br />
-    <p class="answer"><strong>Answer:</strong> umbrella</p>
+      <!-- <div class="photo-gallery"> -->
+        <div class="row photos align-items-center">
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2362155.jpg" data-lightbox="photos10" data-title="What is being held by the man in the jacket?">
+                <img src="assets/images/examples/2362155.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2320242.jpg" data-lightbox="photos10" data-title="What is being held by the man in the jacket?">
+                <img src="assets/images/examples/2320242.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2322606.jpg" data-lightbox="photos10" data-title="What is being held by the man in the jacket?">
+                <img src="assets/images/examples/2322606.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2368037.jpg" data-lightbox="photos10" data-title="What is being held by the man in the jacket?">
+                <img src="assets/images/examples/2368037.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2317105.jpg" data-lightbox="photos10" data-title="What is being held by the man in the jacket?">
+                <img src="assets/images/examples/2317105.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+        </div>
+      <!-- </div> -->
+      <p class="answer"><strong>Answer:</strong> umbrella</p>
+    </div>
   
     
     <hr />
-    <p class="question"><strong>Question:</strong> All of the cats on a laptop are dark.</p>
-    <br />
-    
-    
+    <div class="container">
+      <p class="question"><strong>Question:</strong> All of the cats on a laptop are dark.</p>
       
-      <img class="modal-img hover-shadow" src="assets/images/examples/2376684.jpg" onclick="openModal(this)" alt="2376684.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2317428.jpg" onclick="openModal(this)" alt="2317428.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2369303.jpg" onclick="openModal(this)" alt="2369303.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2410505.jpg" onclick="openModal(this)" alt="2410505.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2402492.jpg" onclick="openModal(this)" alt="2402492.jpg" />
-    
-    <br />
-    <p class="answer"><strong>Answer:</strong> false</p>
+      <!-- <div class="photo-gallery"> -->
+        <div class="row photos align-items-center">
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2376684.jpg" data-lightbox="photos11" data-title="All of the cats on a laptop are dark.">
+                <img src="assets/images/examples/2376684.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2317428.jpg" data-lightbox="photos11" data-title="All of the cats on a laptop are dark.">
+                <img src="assets/images/examples/2317428.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2369303.jpg" data-lightbox="photos11" data-title="All of the cats on a laptop are dark.">
+                <img src="assets/images/examples/2369303.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2410505.jpg" data-lightbox="photos11" data-title="All of the cats on a laptop are dark.">
+                <img src="assets/images/examples/2410505.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2402492.jpg" data-lightbox="photos11" data-title="All of the cats on a laptop are dark.">
+                <img src="assets/images/examples/2402492.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+        </div>
+      <!-- </div> -->
+      <p class="answer"><strong>Answer:</strong> false</p>
+    </div>
   
     
     <hr />
-    <p class="question"><strong>Question:</strong> No men are surfing on a white surfboard.</p>
-    <br />
-    
-    
+    <div class="container">
+      <p class="question"><strong>Question:</strong> No men are surfing on a white surfboard.</p>
       
-      <img class="modal-img hover-shadow" src="assets/images/examples/2352798.jpg" onclick="openModal(this)" alt="2352798.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2398401.jpg" onclick="openModal(this)" alt="2398401.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2375514.jpg" onclick="openModal(this)" alt="2375514.jpg" />
-    
-      
-      <img class="modal-img hover-shadow" src="assets/images/examples/2396469.jpg" onclick="openModal(this)" alt="2396469.jpg" />
-    
-    <br />
-    <p class="answer"><strong>Answer:</strong> true</p>
+      <!-- <div class="photo-gallery"> -->
+        <div class="row photos align-items-center">
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2352798.jpg" data-lightbox="photos12" data-title="No men are surfing on a white surfboard.">
+                <img src="assets/images/examples/2352798.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2398401.jpg" data-lightbox="photos12" data-title="No men are surfing on a white surfboard.">
+                <img src="assets/images/examples/2398401.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2375514.jpg" data-lightbox="photos12" data-title="No men are surfing on a white surfboard.">
+                <img src="assets/images/examples/2375514.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+            
+            <div class="col p-1 hovereffect">
+              <a href="assets/images/examples/2396469.jpg" data-lightbox="photos12" data-title="No men are surfing on a white surfboard.">
+                <img src="assets/images/examples/2396469.jpg" class="img-fluid" />
+              </a>
+            </div>
+          
+        </div>
+      <!-- </div> -->
+      <p class="answer"><strong>Answer:</strong> true</p>
+    </div>
   
 </div>
 
@@ -363,7 +670,35 @@
   <img id="modalImg" />
 </div>
 
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Question</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img id="modalImg2" />
+      </div>
+      <div class="modal-footer">
+        <h5>Answer</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    var img = $(event.relatedTarget) // Button that triggered the modal
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    modal.find('img').attr('src', img.attr('src'));
+    // modal.find('.modal-body input').val(recipient)
+  });
+
   // Get the modal
   function openModal(img) {
     document.getElementById("myModal").style.display = "block";
@@ -376,24 +711,24 @@
 </script>
 
 
-
       <footer class="site-footer">
-        <span class="site-footer-owner">COVR</span>
-        <span class="site-footer-credits">A Test-Bed for Visually Grounded Compositional Generalization with Real Images</span>
+  <span class="site-footer-owner">COVR</span>
+  <span class="site-footer-credits">A Test-Bed for Visually Grounded Compositional Generalization with Real Images</span>
 
-        <p float="left">
-          <a href="https://www.tau-nlp.org/">
-            <img height="100" src="assets/images/logos/tau-nlp.png">
-          </a>
-          <a href="https://ucinlp.github.io/">
-            <img height="100" src="assets/images/logos/uci-nlp.png">
-          </a>
-          <a href="https://allenai.org/">
-            <img height="98" src="assets/images/logos/ai2.png">
-          </a>
-        </p>
+  <p float="left">
+    <a href="https://www.tau-nlp.org/">
+      <img height="100" src="assets/images/logos/tau-nlp.png">
+    </a>
+    <a href="https://ucinlp.github.io/">
+      <img height="100" src="assets/images/logos/uci-nlp.png">
+    </a>
+    <a href="https://allenai.org/">
+      <img height="98" src="assets/images/logos/ai2.png">
+    </a>
+  </p>
 
-      </footer>
+</footer>
+
     </main>
   </div>
 </body>

@@ -2,15 +2,16 @@
 
 For more details refer to [our paper](#paper).
 
-<p align="center" width="100%">
-    <img width="50%" src="assets/images/covr-example.png">
-</p>
+<!-- <p align="center" width="100%"> -->
+<img class="img-thumbnail rounded mx-auto d-block" width="50%" src="assets/images/covr-example.png" alt='COVR Example'>
+<!-- </p> -->
 
 ## Paper
 
 [**COVR: A Test-Bed for Visually Grounded Compositional Generalization with Real Images**][paper]
+
 Ben Bogin, Shivanshu Gupta, Matt Gardner, Jonathan Berant
-*CONFERENCE*  
+**EMNLP 2021**
 
 ```markdown
 @article{Bogin2021COVR,
@@ -21,9 +22,6 @@ with Real Images},
 }
 ```
 
-## Authors
-
-{% include authors.html %}
 
 ## Statistics
 
@@ -56,7 +54,10 @@ with Real Images},
 * For the full documentation of the dataset and its format please refer to our [Github repository][repo].
 * Click here to [download COVR][download].
 
+## Authors
+
+{% include authors.html %}
+
 [download]: {{ layout.download }}
 [repo]: {{ layout.repo }}
 [paper]: {{ layout.paper }}
-[leaderboard]: {{ layout.leaderboard }}
