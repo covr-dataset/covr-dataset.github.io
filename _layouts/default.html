@@ -1,0 +1,91 @@
+---
+logos: assets/images/logos
+paper: https://arxiv.org/
+repo: https://github.com/benbogin/covr-dataset
+download: https://github.com/benbogin/covr-dataset
+leaderboard: https://leaderboard.allenai.org/
+---
+
+{% if jekyll.environment == "production" %}
+  {% assign site_url = site.github.url %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: " en-US" }}">
+
+<head>
+  {% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+
+  <meta charset="UTF-8">
+
+  {% seo %}
+
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="#157878" name="theme-color">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+</head>
+
+<body>
+  <div class="navbar">
+    <a class="active" href="{{ site_url }}/index.html">COVR</a>
+    <a href="{{ layout.paper }}">Paper</a>
+    <a href="{{ site_url }}/explore.html">Explore</a>
+  </div>
+
+  <div class="main">
+    <header class="page-header" role="banner">
+      <h1 class="project-name">COVR</h1>
+      <h2 class="project-tagline">A Test-Bed for Visually Grounded Compositional Generalization with Real Images</h2>
+      <a class="btn" href="{{ layout.paper }}">Paper</a>
+      <!-- <a class="btn" href="{{ site.github.repository_url }}">GitHub</a> -->
+      <a class="btn" href="{{ layout.repo }}">GitHub</a>
+      <a class="btn" href="{{ site_url }}/index.html#download">Download</a>
+      <a class="btn" href="{{ site_url }}/explore.html">Explore</a>
+      <a class="btn" href="{{ site_url }}/index.html#leaderboard">Leaderboard</a>
+    </header>
+
+
+    <main class="main-content" id="content" role="main">
+      <!-- {{site.github.url}}
+      <br>
+      {{site.github.baseurl}}
+      <br>
+      {{site.url}}
+      <br>
+      {{site.baseurl}}
+      <br> -->
+
+      {{ content }}
+
+      <footer class="site-footer">
+        <span class="site-footer-owner">COVR</span>
+        <span class="site-footer-credits">A Test-Bed for Visually Grounded Compositional Generalization with Real Images</span>
+
+        <p float="left">
+          <a href="https://www.tau-nlp.org/">
+            <img height="100" src="{{ layout.logos }}/tau-nlp.png">
+          </a>
+          <a href="https://ucinlp.github.io/">
+            <img height="100" src="{{ layout.logos }}/uci-nlp.png">
+          </a>
+          <a href="https://allenai.org/">
+            <img height="98" src="{{ layout.logos }}/ai2.png">
+          </a>
+        </p>
+
+      </footer>
+    </main>
+  </div>
+</body>
+
+</html>

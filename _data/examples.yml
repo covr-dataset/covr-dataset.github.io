@@ -1,0 +1,48 @@
+
+- question: Is the man wearing the wetsuit crouched?
+  images: 2399053.jpg, 2371945.jpg, 2362991.jpg, 2400554.jpg, 2399681.jpg
+  answer: False
+
+- question: Are there the same number of images that have a cake on a white plate as there are images that have a lemon on a white plate?
+  images: 2372362.jpg, 2339554.jpg, 2396664.jpg, 2394733.jpg, 2388666.jpg
+  answer: True
+
+- question: In how many of the images can you see exactly two green cones?
+  images: 2404190.jpg, 2370737.jpg, 2387283.jpg, 2389826.jpg, 2361887.jpg
+  answer: 2
+
+- question: At least one image depicts a girl hitting a ball while wearing gloves.
+  images: 2412358.jpg, 2319126.jpg, 2379960.jpg, 2401191.jpg, 2386899.jpg
+  answer: False
+
+- question: There are precisely two men wearing white shorts in how many images?
+  images: 2362087.jpg, 2408365.jpg, 2389091.jpg, 2371987.jpg, 2371012.jpg
+  answer: 1
+
+- question: Is the plate on a brown table the same color as the plate that is on a black table?
+  images: 2391219.jpg, 2387048.jpg, 2389735.jpg, 2346114.jpg, 2378140.jpg
+  answer: True
+
+- question: There are fewer plates on the table than there are on the wall.
+  images: 2356515.jpg, 2320242.jpg, 2321317.jpg, 2389735.jpg, 1593260.jpg
+  answer: True
+
+- question: There is at least 1 image with exactly 2 dark bottles on a counter.
+  images: 2373966.jpg, 713086.jpg, 2363794.jpg, 2365382.jpg, 2162.jpg
+  answer: True
+
+- question: Are there 2 boys wearing a hat?
+  images: 2396174.jpg, 2319339.jpg, 2393352.jpg, 2331321.jpg, 2395746.jpg
+  answer: False
+
+- question: What is being held by the man in the jacket?
+  images: 2362155.jpg, 2320242.jpg, 2322606.jpg, 2368037.jpg, 2317105.jpg
+  answer: umbrella
+
+- question: All of the cats on a laptop are dark.
+  images: 2376684.jpg, 2317428.jpg, 2369303.jpg, 2410505.jpg, 2402492.jpg
+  answer: False
+
+- question: No men are surfing on a white surfboard.
+  images: 2352798.jpg, 2398401.jpg, 2375514.jpg, 2396469.jpg
+  answer: True

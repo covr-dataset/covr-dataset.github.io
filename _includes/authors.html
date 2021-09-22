@@ -1,0 +1,12 @@
+<div align="center">
+  {% for author in site.data.authors %}
+    <div class="card">
+      <img src="assets/images/authors/{{ author.image }}" alt="Avatar" style="width:100%">
+      <div class="container">
+        <a href="{{ author.website }}">
+        <h4><b>{{ author.name }} </b></h4>
+        </a>
+      </div>
+    </div>
+  {% endfor %}
+</div>

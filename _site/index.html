@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html>
+<html lang=" en-US">
+
+<head>
+  
+
+  <meta charset="UTF-8">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>COVR | A Test-Bed for Visually Grounded Compositional Generalization with Real Images</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="COVR" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Test-Bed for Visually Grounded Compositional Generalization with Real Images" />
+<meta property="og:description" content="A Test-Bed for Visually Grounded Compositional Generalization with Real Images" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="COVR" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="COVR" />
+<script type="application/ld+json">
+{"headline":"COVR","url":"http://localhost:4000/","@type":"WebSite","description":"A Test-Bed for Visually Grounded Compositional Generalization with Real Images","name":"COVR","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="#157878" name="theme-color">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <link rel="stylesheet" href="/assets/css/style.css?v=213a115749af3a4c18876b3203685d53f66b3c13">
+
+</head>
+
+<body>
+  <div class="navbar">
+    <a class="active" href="/index.html">COVR</a>
+    <a href="https://arxiv.org/">Paper</a>
+    <a href="/explore.html">Explore</a>
+  </div>
+
+  <div class="main">
+    <header class="page-header" role="banner">
+      <h1 class="project-name">COVR</h1>
+      <h2 class="project-tagline">A Test-Bed for Visually Grounded Compositional Generalization with Real Images</h2>
+      <a class="btn" href="https://arxiv.org/">Paper</a>
+      <!-- <a class="btn" href="https://github.com/Shivanshu-Gupta/COVR">GitHub</a> -->
+      <a class="btn" href="https://github.com/benbogin/covr-dataset">GitHub</a>
+      <a class="btn" href="/index.html#download">Download</a>
+      <a class="btn" href="/explore.html">Explore</a>
+      <a class="btn" href="/index.html#leaderboard">Leaderboard</a>
+    </header>
+
+
+    <main class="main-content" id="content" role="main">
+      <!-- https://github.com/pages/Shivanshu-Gupta/COVR
+      <br>
+      /pages/Shivanshu-Gupta/COVR
+      <br>
+      http://localhost:4000
+      <br>
+      
+      <br> -->
+
+      <p><strong>COVR</strong> is a test-bed for visually-grounded compositional generalization with real images. You can use COVR to train Visual Question Answering (VQA) models and evaluate it on various compositional generalization tests, and possibly create your own new compositional splits.</p>
+
+<p>For more details refer to <a href="#paper">our paper</a>.</p>
+
+<p align="center" width="100%">
+    <img width="50%" src="assets/images/covr-example.png" />
+</p>
+
+<h2 id="paper">Paper</h2>
+
+<p><a href="https://arxiv.org/"><strong>COVR: A Test-Bed for Visually Grounded Compositional Generalization with Real Images</strong></a>
+Ben Bogin, Shivanshu Gupta, Matt Gardner, Jonathan Berant
+<em>CONFERENCE</em></p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{Bogin2021COVR,
+  title={COVR: A Test-Bed for Visually Grounded Compositional Generalization
+with Real Images},
+  author={Bogin, Ben and Gupta, Shivanshu and Gardner, Matt and Berant, Jonathan},
+  year={2021}
+}
+</code></pre></div></div>
+
+<h2 id="authors">Authors</h2>
+
+<div align="center">
+  
+    <div class="card">
+      <img src="assets/images/authors/ben.jpg" alt="Avatar" style="width:100%" />
+      <div class="container">
+        <a href="https://benbogin.github.io/">
+        <h4><b>Ben Bogin </b></h4>
+        </a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="assets/images/authors/shivanshu.jpg" alt="Avatar" style="width:100%" />
+      <div class="container">
+        <a href="https://github.com/Shivanshu-Gupta">
+        <h4><b>Shivanshu Gupta </b></h4>
+        </a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="assets/images/authors/matt.jpg" alt="Avatar" style="width:100%" />
+      <div class="container">
+        <a href="https://allenai.org/team/mattg">
+        <h4><b>Matt Gardner </b></h4>
+        </a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="assets/images/authors/jonathan.jpg" alt="Avatar" style="width:100%" />
+      <div class="container">
+        <a href="http://www.cs.tau.ac.il/~joberant">
+        <h4><b>Jonathan Berant </b></h4>
+        </a>
+      </div>
+    </div>
+  
+</div>
+
+<h2 id="statistics">Statistics</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Measurement</th>
+      <th>Train</th>
+      <th>Dev. + Test</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td># total questions</td>
+      <td>248.1k</td>
+      <td>13.9k</td>
+    </tr>
+    <tr>
+      <td># unique questions</td>
+      <td>122.0k</td>
+      <td>7.6k</td>
+    </tr>
+    <tr>
+      <td># unique answers</td>
+      <td>3666</td>
+      <td>1268</td>
+    </tr>
+    <tr>
+      <td># unique images</td>
+      <td>79.0k</td>
+      <td>9.5k</td>
+    </tr>
+    <tr>
+      <td># unique anonymized programs</td>
+      <td>635</td>
+      <td>291</td>
+    </tr>
+    <tr>
+      <td># <code class="language-plaintext highlighter-rouge">True/False (T/F)</code> questions</td>
+      <td>133.3k</td>
+      <td>7.5k</td>
+    </tr>
+    <tr>
+      <td># <code class="language-plaintext highlighter-rouge">X or Y</code> questions</td>
+      <td>50.0k</td>
+      <td>2.9k</td>
+    </tr>
+    <tr>
+      <td># <code class="language-plaintext highlighter-rouge">how many ...</code> questions</td>
+      <td>33.3k</td>
+      <td>1.8k</td>
+    </tr>
+    <tr>
+      <td># Open questions</td>
+      <td>31.5k</td>
+      <td>1.7k</td>
+    </tr>
+    <tr>
+      <td>avg. # question words (a/p*)</td>
+      <td>14.0</td>
+      <td>13.5/11.9</td>
+    </tr>
+    <tr>
+      <td>avg. # images per question</td>
+      <td>4.4</td>
+      <td>3.4</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><small>* a: automatically-generated, p: paraphrased</small></p>
+
+<h2 id="leaderboard">Leaderboard</h2>
+
+<h3 id="few-shot">Few-shot</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Has-Quant</th>
+      <th>Has-Quant-All</th>
+      <th>Has-Quant-CompScope</th>
+      <th>Has-Compar</th>
+      <th>Has-Compar-More</th>
+      <th>Has-GroupBy</th>
+      <th>Has-Logic</th>
+      <th>Has-Logic-And</th>
+      <th>Has-Num-3</th>
+      <th>Has-Num3-Ans-3</th>
+      <th>Ans-Num</th>
+      <th>Average</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ViLBERT (Bogin et al., EMNLP’21)</td>
+      <td>65.6</td>
+      <td>60.9</td>
+      <td>67.5</td>
+      <td>64.2</td>
+      <td>79.8</td>
+      <td>55.6</td>
+      <td>72.1</td>
+      <td>70.9</td>
+      <td>67.7</td>
+      <td>27.5</td>
+      <td>38.5</td>
+      <td>60.9</td>
+    </tr>
+    <tr>
+      <td>VisualBERT (Bogin et al., EMNLP’21)</td>
+      <td>55.8</td>
+      <td>69.2</td>
+      <td>60.4</td>
+      <td>57.5</td>
+      <td>79.8</td>
+      <td>56.5</td>
+      <td>69.3</td>
+      <td>74.8</td>
+      <td>68.8</td>
+      <td>25.8</td>
+      <td>32.2</td>
+      <td>59.1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="zero-shot">Zero-shot</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Program Split</th>
+      <th>Lexical Split</th>
+      <th>Has-Quant-CompScope &amp; Has-Quant-All</th>
+      <th>Has-Count &amp; Has-Attr</th>
+      <th>Has-Count &amp; RM/V/C</th>
+      <th>Has-SameAttr-Color</th>
+      <th>TPL-ChooseObject</th>
+      <th>TPL-VerifyQuantAttr</th>
+      <th>TPL-VerifyAttr</th>
+      <th>TPL-VerifyCount + TPL-VerifyCountGroupBy</th>
+      <th>Average</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>VisualBERT (Bogin et al., EMNLP’21)</td>
+      <td>49.5</td>
+      <td>71.5</td>
+      <td>57.7</td>
+      <td>58.7</td>
+      <td>74.1</td>
+      <td>66</td>
+      <td>1.6</td>
+      <td>71.2</td>
+      <td>0</td>
+      <td>41.7</td>
+      <td>49.2</td>
+    </tr>
+    <tr>
+      <td>ViLBERT (Bogin et al., EMNLP’21)</td>
+      <td>49</td>
+      <td>71.5</td>
+      <td>64.7</td>
+      <td>57.4</td>
+      <td>71.4</td>
+      <td>64.7</td>
+      <td>2</td>
+      <td>61.2</td>
+      <td>0</td>
+      <td>29.5</td>
+      <td>47.1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="explore">Explore</h2>
+
+<p><a href="/explore">Explore COVR</a> to view examples from COVR</p>
+
+<h2 id="download">Download</h2>
+
+<ul>
+  <li>For the full documentation of the dataset and its format please refer to our <a href="https://github.com/benbogin/covr-dataset">Github repository</a>.</li>
+  <li>Click here to <a href="https://github.com/benbogin/covr-dataset">download COVR</a>.</li>
+</ul>
+
+
+
+      <footer class="site-footer">
+        <span class="site-footer-owner">COVR</span>
+        <span class="site-footer-credits">A Test-Bed for Visually Grounded Compositional Generalization with Real Images</span>
+
+        <p float="left">
+          <a href="https://www.tau-nlp.org/">
+            <img height="100" src="assets/images/logos/tau-nlp.png">
+          </a>
+          <a href="https://ucinlp.github.io/">
+            <img height="100" src="assets/images/logos/uci-nlp.png">
+          </a>
+          <a href="https://allenai.org/">
+            <img height="98" src="assets/images/logos/ai2.png">
+          </a>
+        </p>
+
+      </footer>
+    </main>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<div>
+  {% for ex in site.data.examples%}
+    {% assign i = forloop.index %}
+    <hr>
+    <p class="question"><strong>Question:</strong> {{ ex.question }}</p>
+    <br>
+    {% assign images = ex.images | split: ', ' %}
+    {% for image in images %}
+      {% assign j = forloop.index %}
+      <img class='modal-img hover-shadow' src="assets/images/examples/{{ image }}" onclick="openModal(this)" alt="{{ image }}">
+    {% endfor %}
+    <br>
+    <p class="answer"><strong>Answer:</strong> {{ ex.answer }}</p>
+  {% endfor %}
+</div>
+
+{% include modal-script.html %}

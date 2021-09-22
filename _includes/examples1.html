@@ -1,0 +1,130 @@
+<div>
+  {% for ex in site.data.examples%}
+    {% assign i = forloop.index %}
+    <hr>
+    <p class="question"><strong>Question:</strong> {{ ex.question }}</p>
+    <br>
+    {% assign images = ex.images | split: ', ' %}
+    {% assign n_images = images.size %}
+    <div id="row{{i}}" class="row">
+      {% for image in images %}
+        {% assign j = forloop.index %}
+        <!-- <div class="column column{{n_images}}"> -->
+          <img class='modal-img hover-shadow' src="assets/images/examples/{{ image }}" onclick="openModal({{i}})" alt="{{ image }}">
+        <!-- </div> -->
+      {% endfor %}
+    </div>
+    <br>
+    <p class="answer"><strong>Answer:</strong> {{ ex.answer }}</p>
+  {% endfor %}
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content"></div>
+</div>
+
+<!-- <script>
+  // Get the modal
+  function openModal(img) {
+    document.getElementById("myModal").style.display = "block";
+    document.getElementById("modalImg").src = img.src;
+  }
+  // When the user clicks on <span> (x), close the modal
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+</script> -->
+<script>
+  // Open the Modal
+  function openModal(i) {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+    // modal.style.display = "flex";
+    var content = modal.children[modal.children.length - 1];
+    content.innerHTML = "";
+    var row = document.getElementById('row' + i);
+
+    var srcs = Array.from(row.children).map(img => img.src);
+    for(src of srcs) {
+      slide_div = document.createElement("div");
+      slide_div.className = "mySlides";
+      img = document.createElement("img");
+      img.src = src;
+      // img.align = 'center';
+      img.style = "width:50%";
+      // img.margin = 'auto';
+      // img.style.display = 'block';
+      slide_div.appendChild(img);
+      content.appendChild(slide_div);
+    }
+    prev = document.createElement('a');
+    prev.className = "prev";
+    prev.innerHTML = "&#10094;";
+    prev.addEventListener("onClick", function(){plusSlides(-1);});
+    content.appendChild(prev);
+
+    next = document.createElement('a');
+    next.className = "next";
+    next.innerHTML = "&#10095;";
+    next.addEventListener("onClick", function(){plusSlides(1);});
+    content.appendChild(next);
+
+    caption_div = document.createElement('div');
+    caption_div.className = 'caption-container';
+    caption = document.createElement('p');
+    caption.setAttribute('id', 'caption');
+    caption_div.appendChild(caption);
+    content.appendChild(caption_div);
+
+    for (i = 0; i < srcs.length; i++) {
+    // for(src of srcs) {
+      slide_div = document.createElement("div");
+      slide_div.className = `column column${srcs.length}`;
+      img = document.createElement("img");
+      img.className = "demo";
+      img.addEventListener("onClick", function() {console.log(i);currentSlide(i + 1);});
+      img.src = srcs[i];
+      img.alt = srcs[i];
+      slide_div.appendChild(img);
+      content.appendChild(slide_div);
+    }
+    showSlides(slideIndex);
+  }
+
+  // Close the Modal
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  var slideIndex = 1;
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+</script>

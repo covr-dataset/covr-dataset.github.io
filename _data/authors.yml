@@ -1,0 +1,15 @@
+- name: Ben Bogin
+  image: ben.jpg
+  website: https://benbogin.github.io/
+
+- name: Shivanshu Gupta
+  image: shivanshu.jpg
+  website: https://github.com/Shivanshu-Gupta
+
+- name: Matt Gardner
+  image: matt.jpg
+  website: https://allenai.org/team/mattg
+
+- name: Jonathan Berant
+  image: jonathan.jpg
+  website: http://www.cs.tau.ac.il/~joberant
