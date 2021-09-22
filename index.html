@@ -1,10 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=" en-US">
+
 <head>
+    <link rel="stylesheet" href="style.css">
+
+    <base href="https://shivanshu-gupta.github.io/COVR/">
+
     <meta charset="UTF-8">
-    <title>COVR</title>
+
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+    <title>COVR | A Test-Bed for Visually Grounded Compositional Generalization with Real Images</title>
+    <meta name="generator" content="Jekyll v3.9.0"/>
+    <meta property="og:title" content="COVR"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta name="description" content="A Test-Bed for Visually Grounded Compositional Generalization with Real Images"/>
+    <meta property="og:description"
+          content="A Test-Bed for Visually Grounded Compositional Generalization with Real Images"/>
+    <link rel="canonical" href="https://shivanshu-gupta.github.io/COVR/"/>
+    <meta property="og:url" content="https://shivanshu-gupta.github.io/COVR/"/>
+    <meta property="og:site_name" content="COVR"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta property="twitter:title" content="COVR"/>
+    <script type="application/ld+json">
+        {
+            "description": "A Test-Bed for Visually Grounded Compositional Generalization with Real Images",
+            "url": "https://shivanshu-gupta.github.io/COVR/",
+            "@type": "WebSite",
+            "headline": "COVR",
+            "name": "COVR",
+            "@context": "https://schema.org"
+        }</script>
+    <!-- End Jekyll SEO tag -->
+
+
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="#157878" name="theme-color">
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+
 </head>
+
 <body>
-?
+
+<div class="main">
+    <header class="page-header" role="banner">
+        <h1 class="project-name">COVR</h1>
+        <h2 class="project-tagline">A Test-Bed for Visually Grounded Compositional Generalization with Real Images</h2>
+    </header>
+
+
+    <main class="main-content" id="content" role="main">
+
+        <p><strong>COVR</strong> is a test-bed for visually-grounded compositional generalization with real images. You
+            can use COVR to train Visual Question Answering (VQA) models and evaluate it on various compositional
+            generalization tests, and possibly create your own new compositional splits.</p>
+
+        <p>For more details refer to <a href="#paper">our paper</a> (to be presented in EMNLP 2021).</p>
+
+        <p align="center" width="100%">
+            <img width="50%" src="assets/images/covr-example.png"/>
+        </p>
+
+        <h2 id="authors">Authors</h2>
+
+        <div align="center">
+
+            <div class="card">
+                <img src="assets/images/authors/ben.jpg" alt="Avatar" style="width:100%"/>
+                <div class="container">
+                    <a href="https://benbogin.github.io/">
+                        <h4><b>Ben Bogin </b></h4>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/images/authors/shivanshu.jpg" alt="Avatar" style="width:100%"/>
+                <div class="container">
+                    <a href="https://github.com/Shivanshu-Gupta">
+                        <h4><b>Shivanshu Gupta </b></h4>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/images/authors/matt.jpg" alt="Avatar" style="width:100%"/>
+                <div class="container">
+                    <a href="https://allenai.org/team/mattg">
+                        <h4><b>Matt Gardner </b></h4>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="assets/images/authors/jonathan.jpg" alt="Avatar" style="width:100%"/>
+                <div class="container">
+                    <a href="http://www.cs.tau.ac.il/~joberant">
+                        <h4><b>Jonathan Berant </b></h4>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 id="statistics">Statistics</h2>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Measurement</th>
+                <th>Train</th>
+                <th>Dev. + Test</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td># total questions</td>
+                <td>248.1k</td>
+                <td>13.9k</td>
+            </tr>
+            <tr>
+                <td># unique questions</td>
+                <td>122.0k</td>
+                <td>7.6k</td>
+            </tr>
+            <tr>
+                <td># unique answers</td>
+                <td>3666</td>
+                <td>1268</td>
+            </tr>
+            <tr>
+                <td># unique images</td>
+                <td>79.0k</td>
+                <td>9.5k</td>
+            </tr>
+            <tr>
+                <td># unique anonymized programs</td>
+                <td>635</td>
+                <td>291</td>
+            </tr>
+            <tr>
+                <td># <code class="language-plaintext highlighter-rouge">True/False (T/F)</code> questions</td>
+                <td>133.3k</td>
+                <td>7.5k</td>
+            </tr>
+            <tr>
+                <td># <code class="language-plaintext highlighter-rouge">X or Y</code> questions</td>
+                <td>50.0k</td>
+                <td>2.9k</td>
+            </tr>
+            <tr>
+                <td># <code class="language-plaintext highlighter-rouge">how many ...</code> questions</td>
+                <td>33.3k</td>
+                <td>1.8k</td>
+            </tr>
+            <tr>
+                <td># Open questions</td>
+                <td>31.5k</td>
+                <td>1.7k</td>
+            </tr>
+            <tr>
+                <td>avg. # question words (a/p*)</td>
+                <td>14.0</td>
+                <td>13.5/11.9</td>
+            </tr>
+            <tr>
+                <td>avg. # images per question</td>
+                <td>4.4</td>
+                <td>3.4</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p><small>* a: automatically-generated, p: paraphrased</small></p>
+
+        <h2 id="download">Download</h2>
+
+        <ul>
+            <li>For the full documentation of the dataset and its format please refer to our <a
+                    href="https://github.com/benbogin/covr-dataset">Github repository</a>.
+            </li>
+        </ul>
+
+
+        <footer class="site-footer">
+            <span class="site-footer-owner">COVR</span>
+            <span class="site-footer-credits">A Test-Bed for Visually Grounded Compositional Generalization with Real Images</span>
+
+            <p float="left">
+                <a href="https://www.tau-nlp.org/">
+                    <img height="100" src="assets/images/logos/tau-nlp.png">
+                </a>
+                <a href="https://ucinlp.github.io/">
+                    <img height="100" src="assets/images/logos/uci-nlp.png">
+                </a>
+                <a href="https://allenai.org/">
+                    <img height="98" src="assets/images/logos/ai2.png">
+                </a>
+            </p>
+
+        </footer>
+    </main>
+</div>
 </body>
+
 </html>
