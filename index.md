@@ -4,7 +4,7 @@
 <img class="img-thumbnail rounded mx-auto d-block" width="50%" src="assets/images/covr-example.png" alt='COVR Example'>
 <!-- </p> -->
 
-For more details refer to [our paper](#paper):
+For more details refer to our paper:
 
 [**COVR: A Test-Bed for Visually Grounded Compositional Generalization with Real Images**][paper]
 
